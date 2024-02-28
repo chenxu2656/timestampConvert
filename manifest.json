@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "时间戳转换器",
+  "version": "1.0",
+  "description": "右键点击时间戳转换成人类可读的时间。",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "转换时间戳",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Chrome Extension Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+    .github-link {
+      margin-top: 10px;
+    }
+    .timestamp {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Chrome Extension Popup</h1>
+  <p>This is a highlighted content.</p>
+  <p class="highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <a class="github-link" href="https://github.com/your-github-profile">Visit my GitHub profile</a>
+  <p class="timestamp">Current timestamp: <span id="current-timestamp"></span></p>
+  <script>
+    // Get the current timestamp
+    const currentTimestamp = Date.now();
+    document.getElementById('current-timestamp').textContent = currentTimestamp;
+  </script>
+</body>
+</html>
